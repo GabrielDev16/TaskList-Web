@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* .roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* Estilo dos links para entrar nas paginas da pagina lateral de navegação */
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.termo{
+    font-weight: 600;
+    color: blue;
+}
+
+.barra-lateral{
+    background-color: #091B52;
+    height: 100vh;
+}
+
+#a{
+    color: #E0D6C1;
+}
+#a:hover{
+    color: #00C6EE;
+}
+
+.text-area{
+    resize: none;
+}
+
+.ar-prin{
+    background-color: #00C6EE;
+}
+
+.logo{
+    background: #fff;
+    border-radius: 50%;
+  }  
+.linha{
+    color: #E0D6C1  ;
+}
