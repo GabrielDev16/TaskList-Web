@@ -27,7 +27,7 @@ Exemplo:
 
 ```markdown
 ### Tela de Inicial
-![Tela de Inicial](Image/Tela%20Incial.png)
+<img src="Image/Tela Incial.png" alt="tela inicial">
 
 ### Tela de Criação de Tarefa
 ![Tela de Criar Tarefas](Image/Tela%20de%20Criação%20de%20tarefas.png)
