@@ -20,49 +20,36 @@
 <body>
     <!-- Barra de Navegação Lateral -->
     <div class="container-fluid ar-prin">
-        <div class="row ">
-            <div class="col-2 barra-lateral">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-12 col-md-3 col-lg-2 barra-lateral bg-light min-vh-100">
                 <div class="text-center mt-4">
                     <img class="logo" width="130px" src="Image/TASKLIST-PNG.png" alt="logo do projeto">
                 </div>
                 <hr class="linha">
-                <nav class="nav mt-3 flex-column pesquisa">
-
-                    <a class="nav-link " id="a" href="index.html"><i class="fa-solid fa-house"></i> Ínicio</a>
-                    <a class="nav-link " id="a" href="pagina3.html"><i class="fa-solid fa-marker"></i> Criar Tarefa</a>
-                    <a class="nav-link " id="a" href="pagina4.html"><i class="fa-solid fa-list-check"></i> Ver
-                        tarefa</a>
+                <div class="nav mt-3 flex-column pesquisa">
+                    <a class="nav-link" id="a" href="index.html"><i class="fa-solid fa-house"></i> Ínicio</a>
+                    <a class="nav-link" id="a" href="pagina3.html"><i class="fa-solid fa-marker"></i> Criar Tarefa</a>
+                    <a class="nav-link" id="a" href="pagina4.html"><i class="fa-solid fa-list-check"></i> Ver tarefa</a>
                     <div class="btn-group">
                         <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Mais Funções
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link " href="pagina1.html"><i class="fa-solid fa-right-to-bracket"></i>
-                                    Login</a></li>
-                            <li><a class="nav-link " href="pagina2.html"><i
-                                        class="fa-solid fa-person-walking-arrow-right"></i> Criar Conta</a></li>
+                            <li><a class="nav-link" href="pagina1.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                            <li><a class="nav-link" href="pagina2.html"><i class="fa-solid fa-person-walking-arrow-right"></i> Criar Conta</a></li>
+                            <li><a class="nav-link" href="pagina5.html"><i class="fa-solid fa-user"></i> Perfil</a></li>
                         </ul>
                     </div>
-                </nav>
-            </div>
-
-            <!-- div de conteudo lateral para exibição das tarefas -->
-            <div class="col-10">
+                </div>
+            </nav>
+            <!-- Main Content -->
+            <main class="col-12 col-md-9 col-lg-10 ms-auto">
                 <div class="container">
-                    <div class="row mt-5 mb-2">
-                        <div class="col">
-                            <div class="card mb-2" style="width: 18rem;">
-                                <div class="card-body ">
-                                    <h5 class="card-title">Esrever uma Redeção</h5>
-                                    <p class="card-text">Tema: vida que segue.</p>
-                                    <button class="btn btn-warning"><i class="fa-solid fa-pencil"></i> Editar</button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i> Apagar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card mb-2" style="width: 18rem;">
+                    <div class="row mt-5 mb-2 g-3">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card mb-2 h-100" style="width: 100%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Esrever uma Redeção</h5>
                                     <p class="card-text">Tema: vida que segue.</p>
@@ -71,8 +58,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card mb-2" style="width: 18rem;">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card mb-2 h-100" style="width: 100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Esrever uma Redeção</h5>
+                                    <p class="card-text">Tema: vida que segue.</p>
+                                    <button class="btn btn-warning"><i class="fa-solid fa-pencil"></i> Editar</button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i> Apagar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card mb-2 h-100" style="width: 100%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Esrever uma Redeção</h5>
                                     <p class="card-text">Tema: vida que segue.</p>
@@ -82,9 +79,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </main>
         </div>
     </div>
 
