@@ -8,7 +8,7 @@
     "wdth" 100;
 } */
 
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -16,40 +16,47 @@
 
 /* Estilo dos links para entrar nas paginas da pagina lateral de navegação */
 
-*{
+* {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
 
-.termo{
+.termo {
     font-weight: 600;
     color: blue;
 }
 
-.barra-lateral{
-    background-color: #091B52;
+.barra-lateral {
+    background-color: #181C14;
     height: 100vh;
 }
 
-#a{
+#a {
     color: #E0D6C1;
 }
-#a:hover{
+
+#a:hover {
     color: #00C6EE;
 }
 
-.text-area{
+.text-area {
     resize: none;
 }
 
-.ar-prin{
-    background-color: #00C6EE;
+.fundo {
+    background-color: #8A8E92;
 }
 
-.logo{
+.logo {
     background: #fff;
     border-radius: 50%;
-  }  
-.linha{
-    color: #E0D6C1  ;
+}
+
+.linha {
+    color: #E0D6C1;
+}
+
+#ft-perfil {
+    border-radius: 50%;
+    background-color: #123AE3;
 }

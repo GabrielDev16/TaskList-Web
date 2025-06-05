@@ -1,51 +1,58 @@
-// Espera o conteúdo da página carregar
+// Espera o conteúdo da página carregar antes de executar o script
 document.addEventListener("DOMContentLoaded", function () {
-    // Verifica em qual página estamos
+    // Verifica em qual página o usuário está
     if (window.location.pathname.includes("pagina3.html")) {
-        setupCriarTarefa();
+        setupCriarTarefa(); // Se for a página de criar tarefa, ativa a função de criação
     } else if (window.location.pathname.includes("pagina4.html")) {
-        exibirTarefas();
+        exibirTarefas(); // Se for a página de exibir tarefas, mostra as tarefas salvas
     }
 });
 
-// Função para criar tarefa
+// Função para configurar a criação de tarefas na página 3
 function setupCriarTarefa() {
+    // Seleciona o botão de criar tarefa e os campos de título e descrição
     const btnCriar = document.querySelector("button[onclick='btnCria']");
     const inputTitulo = document.getElementById("tituloTarefa");
     const inputDescricao = document.getElementById("descricao");
 
+    // Adiciona evento de clique ao botão de criar tarefa
     btnCriar.addEventListener("click", function () {
+        // Pega os valores digitados e remove espaços extras
         const titulo = inputTitulo.value.trim();
         const descricao = inputDescricao.value.trim();
 
+        // Valida se os campos estão preenchidos
         if (!titulo || !descricao) {
             alert("Preencha todos os campos!");
             return;
         }
 
-        // Pega tarefas salvas (ou cria array novo)
+        // Recupera as tarefas já salvas no localStorage (ou cria um array novo)
         let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
-        // Adiciona nova tarefa
+        // Adiciona a nova tarefa ao array
         tarefas.push({ titulo, descricao });
 
-        // Salva no localStorage
+        // Salva o array atualizado no localStorage
         localStorage.setItem("tarefas", JSON.stringify(tarefas));
 
-        // Limpa campos e avisa
+        // Limpa os campos do formulário e avisa o usuário
         inputTitulo.value = "";
         inputDescricao.value = "";
         alert("Tarefa criada com sucesso!");
     });
 }
 
-// Função para exibir tarefas na página 4
+// Função para exibir as tarefas na página 4
 function exibirTarefas() {
+    // Recupera as tarefas do localStorage
     let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    // Seleciona o container onde os cards das tarefas serão exibidos
     const container = document.querySelector(".container .row");
 
-    container.innerHTML = ""; // Limpa os cards fixos do HTML
+    container.innerHTML = ""; // Limpa o conteúdo anterior do container
 
+    // Para cada tarefa, cria um card com título, descrição e botões de editar/apagar
     tarefas.forEach((tarefa, index) => {
         const card = document.createElement("div");
         card.className = "col";
@@ -59,29 +66,31 @@ function exibirTarefas() {
                 </div>
             </div>
         `;
-        container.appendChild(card);
+        container.appendChild(card); // Adiciona o card ao container
     });
 }
 
-// Apagar tarefa
+// Função para apagar uma tarefa pelo índice
 function apagarTarefa(index) {
     let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
-    tarefas.splice(index, 1);
-    localStorage.setItem("tarefas", JSON.stringify(tarefas));
-    exibirTarefas(); // Atualiza a lista
+    tarefas.splice(index, 1); // Remove a tarefa do array
+    localStorage.setItem("tarefas", JSON.stringify(tarefas)); // Atualiza o localStorage
+    exibirTarefas(); // Atualiza a lista exibida
 }
 
-// Editar tarefa
+// Função para editar uma tarefa pelo índice
 function editarTarefa(index) {
     let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    // Pede ao usuário os novos valores para título e descrição
     const novaTitulo = prompt("Editar título:", tarefas[index].titulo);
     const novaDescricao = prompt("Editar descrição:", tarefas[index].descricao);
 
+    // Se o usuário não cancelar, atualiza a tarefa
     if (novaTitulo && novaDescricao) {
         tarefas[index].titulo = novaTitulo;
         tarefas[index].descricao = novaDescricao;
-        localStorage.setItem("tarefas", JSON.stringify(tarefas));
-        exibirTarefas();
+        localStorage.setItem("tarefas", JSON.stringify(tarefas)); // Salva as alterações
+        exibirTarefas(); // Atualiza a lista exibida
     } else {
         alert("Edição cancelada.");
     }

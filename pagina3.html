@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -18,9 +18,9 @@
 
 <body>
     <!-- Barra de Navegação Lateral -->
-    <div class="container-fluid ar-prin">
+    <div class="container-fluid fundo">
         <div class="row flex-nowrap">
-            <nav class="col-12 col-md-2 barra-lateral bg-light min-vh-100">
+            <nav class="col-12 col-md-2  bg-dark min-vh-100">
                 <div class="text-center mt-4">
                     <img class="logo" width="130px" src="Image/TASKLIST-PNG.png" alt="logo do projeto">
                 </div>
@@ -42,7 +42,10 @@
                     </div>
                 </nav>
             </nav>
+
+            <!-- Tela de criação de tREFA -->
             <main class="col-12 col-md-10 px-4">
+
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8">
@@ -51,17 +54,20 @@
                                     <h2>Crie Sua Tarefa Aqui</h2>
                                 </div>
                                 <form>
+                                    <!-- cOMPO PARA DIGITAR A TAREFA A SER CRIADA -->
                                     <div class="card-body">
                                         <div class="mb-3">
                                             <label for="tituloTarefa">Digite Sua Tarefa:</label>
                                             <input id="tituloTarefa" required class="form-control" type="text">
                                         </div>
+                                    <!-- CAMPO PARA DIGITAR A DESCRIÇÃO DA TAREFA -->
                                         <div class="mb-3">
                                             <label for="descricao">Digite a descrição da sua tarefa:</label>
                                             <textarea id="descricao" rows="6" required class="form-control text-area"></textarea>
                                         </div>
                                         <hr>
                                         <div class="mb-2">
+                                            <!-- BOTÕES QUE ENVIAM E LIMPA AS TAREFAS -->
                                             <div class="row">
                                                 <div class="col-12 d-flex justify-content-center">
                                                     <button type="button" onclick="btnCria"
