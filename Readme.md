@@ -26,16 +26,35 @@ Para adicionar prints das telas do seu sistema, utilize a sintaxe de imagem do M
 Exemplo:
 
 ```markdown
+### Tela de Login
+<div aling="center">
+<img src="" alt="Tela Login" width="400">
+</div>
+
+### Tela de Criação de Conta
+<div aling="center">
+<img src="" alt="Tela criar conta" width="400">
+</div>
+
 ### Tela de Inicial
-<img src="Image/Tela Incial.png" alt="tela inicial">
+<div aling="center">
+<img src="" alt="Tela Inicial" width="400">
+</div>
 
 ### Tela de Criação de Tarefa
-![Tela de Criar Tarefas](Image/Tela%20de%20Criação%20de%20tarefas.png)
+<div aling="center">
+<img src="" alt="Tela de Criação de tarefa" width="400">
+</div>
 
 ### Tela de Visualização de Tarefa
-![Tela de Visualização de Tarefa](Image/Visualizador%20de%20tarefas.png)
-```
+<div aling="center">
+<img src="" alt="Tela  visualização de tarefa" width="400">
+</div>
 
+### Tela de Perfil
+<div aling="center">
+<img src="https://github.com/user-attachments/assets/15473953-0d91-49ae-bfb1-20005d03be05.png" alt="Tela de perfil" width="400">
+</div>
 
 ## Créditos do Criador
 
