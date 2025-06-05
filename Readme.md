@@ -20,7 +20,7 @@ O **TaskList Web** é um projeto desenvolvido para facilitar o gerenciamento de 
 Para adicionar prints das telas do seu sistema, utilize a sintaxe de imagem do Markdown:
 
 <p align="center">
-  <img src="Image/Tela%20Inicial.png" alt="Tela Inicial" width="500"/>
+  <img src="Image/Tela de Criação.png" alt="Tela Inicial" width="500"/>
 </p>
 
 
